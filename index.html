@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport"  content="width=device-width, initial-scale-1.0" />
 		<title>Black Hot Coffee</title>
 		<link rel="stylesheet" href="CSS/index.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 	</head>
 	<body>
-		<!--HEADER-->
-		<header id='header'>
-			<img id='img_header' src='Images/coffee-cup.png' alt='header_image'>
-			<img id='img_header' src='Images/coffee(2).png' alt='header_image'>
-			<img id='img_header' src='Images/cafe.png' alt='header_image'>
-			<img id='img_header' src='Images/cup.png' alt='header_image'>
-			<img id='img_header' src='Images/sign.png' alt='header_image'>
-		</header>
+		<!--NOTIFICATION-->
+		<div id='scroller_home'></div>
+		<section id='flex_notification'>
+			<div id='notification_image'></div>
+			<p id='notification_p'></p>
+		</section>
 		
-		<!--NAV BAR-->
+		<!--NAVBAR-->
 		<nav id='navbar'>
 			<div id='flex_navbar1'>
 				<img id='img_logo' src='Images/coffee.png' alt='Logo'>
 				<ul>
-					<li>Home</li>
-					<li>gallery</li>
-					<li>About</li>
+					<li ><a id='a_home' href='#scroller_home'>Home</a></li>
+					<li ><a id='a_store' href='#scroller_store'>Store</a></li>
+					<li><a id='a_gallery' href='#scroller_gallery'>Gallery</a></li>
+					<li><a id='a_about' href='#scroller_about'>About</a></li>
 				</ul>
 			</div>
 			<div id='flex_navbar2'>
@@ -33,43 +33,124 @@
 		
 		<!--MAIN IMAGE-->
 		<div id='img_main1'>
-			<h1>Black Hot Coffee</h1>
+			<h1>Black<br>Hot<br>Coffee</h1>
+			<div id='flex_imgMain1Credits'>
+				<h3 id='img_main1_credit'><h3>
+				<a target='new'>Pexels</a>
+			</div>
 		</div>
 		
-		<div class='separator'></div>
+		<!--HEADER-->
+		<header id='header'>
+			<img id='img_header' src='Images/coffee-cup.png' alt='header_image'>
+			<img id='img_header' src='Images/coffee(2).png' alt='header_image'>
+			<img id='img_header' src='Images/cafe.png' alt='header_image'>
+			<img id='img_header' src='Images/cup.png' alt='header_image'>
+			<img id='img_header' src='Images/sign.png' alt='header_image'>
+		</header>
 		
-		<!--gallery-->
-		<div id='gallery'>
-			<h2 id='h2_gallery'>GALLERY<h2>
-			<div id='flex_gallery'>
-				<div class='gallery_images'>
-					<img id='img_header' src='Images/pexels-jason-villanueva-851555.jpg' alt='gallery_image'>
-					<p class='caption'>Foto de Jason Villanueva no Pexels</p>
+		<div id='flex_subSections'>
+			<!--STORE-->
+			<div id='scroller_store'></div>
+			<section id='store'>
+				<h2 id='h2_store'>STORE</h2>
+				<div id='flex_store'>
+					<div id='box_store'>
+						<img id='box_store_img' src='Images/pexels-hiago-italo-2115210.jpg'>
+						<a href='https://www.pexels.com/@hiagoitalo'>@Hiago Italo</a>
+						<p id='box_store_title'>Coffee Brewer</p>
+						<p id='box_store_price'>200$</p>
+						<button id='box_store_button' type='button' onmousedown="notification_pop('Coffee Brewer', 'Images/pexels-hiago-italo-2115210.jpg')">To cart</button>
+					</div>
+					<div id='box_store'>
+						<img id='box_store_img' src='Images/pexels-cup-of-couple-7658346.jpg'>
+						<a href='https://www.pexels.com/@cup-of-couple'>@Cup-Of-Couple</a>
+						<p id='box_store_title'>Starter Kit</p>
+						<p id='box_store_price'>60$</p>
+						<button id='box_store_button' type=button onmousedown="notification_pop('Starter Kit', 'Images/pexels-cup-of-couple-7658346.jpg')">To cart</button>
+					</div>
+					<div id='box_store'>
+						<img id='box_store_img' src='Images/pexels-mario-rocca-4801433.jpg'>
+						<a href='https://www.pexels.com/@roccafotos'>@Mario ROCCA</a>
+						<p id='box_store_title'>COMING SOON</p>
+						<p id='box_store_price'>-</p>
+					</div>
 				</div>
-				<div class='gallery_images'>
-					<img id='img_header' src='Images/pexels-burst-374147.jpg' alt='gallery_image'>
-					<p class='caption'>Foto de Burst no Pexels</p>
+			</section>
+			
+			<!--GALLERY-->
+			<div id='scroller_gallery'></div>
+			<section id='gallery'>
+				<h2 id='h2_gallery'>GALLERY</h2>
+				<div id='flex_gallery'>
+					<div class='gallery_images'>
+						<a href='Images/pexels-jason-villanueva-851555.jpg' target='new'>
+							<img id='img_header' src='Images/pexels-jason-villanueva-851555.jpg' alt='gallery_image'>
+						</a>
+						<p class='caption'>Photo By Jason Villanueva from <a href='https://www.pexels.com/@jayoke'>Pexels</a></p>
+					</div>
+					<div class='gallery_images'>
+						<a href='Images/pexels-burst-374147.jpg' target='new'>
+							<img id='img_header' src='Images/pexels-burst-374147.jpg' alt='gallery_image'>
+						</a>
+						<p class='caption'>Photo By Burst from <a href='https://www.pexels.com/@burst'>Pexels</a></p>
+					</div>
+					<div class='gallery_images'>
+						<a href='Images/pexels-dominika-roseclay-977876.jpg' target='new'>
+							<img id='img_header' src='Images/pexels-dominika-roseclay-977876.jpg' alt='gallery_image'>
+						</a>
+						<p class='caption'>Photo By Dominika Roseclay from <a href='https://www.pexels.com/@punchbrandstock'>Pexels</a></p>
+					</div>
+					<div class='gallery_images'>
+						<a href='Images/pexels-pixabay-414551.jpg' target='new'>
+							<img id='img_header' src='Images/pexels-pixabay-414551.jpg' alt='gallery_image'>
+						</a>
+						<p class='caption'>Photo By Pixabay from <a href='https://www.pexels.com/@pixabay'>Pexels</a></p>
+					</div>
+					<div class='gallery_images'>
+						<a href='Images/pexels-chevanon-photography-324028.jpg' target='new'>
+							<img id='img_header' src='Images/pexels-chevanon-photography-324028.jpg' alt='gallery_image'>
+						</a>
+						<p class='caption'>Photo By Chevanon from <a href='https://www.pexels.com/@chevanon'>Pexels</a></p>
+					</div>
 				</div>
-				<div class='gallery_images'>
-					<img id='img_header' src='Images/pexels-dominika-roseclay-977876.jpg' alt='gallery_image'>
-					<p class='caption'>Foto de Dominika Roseclay no Pexels</p>
+			</section>
+			
+			<!--ABOUT-->
+			<div id='scroller_about'></div>
+			<section id='about'>
+				<div id='flex_about'>
+					<h2>About Us</h2>
+					<p>//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra venenatis molestie. Integer maximus scelerisque velit. Suspendisse finibus dui sed libero eleifend suscipit sit amet id leo. Nulla ornare purus a tincidunt imperdiet. Vestibulum interdum, ipsum eu posuere sodales, mi velit consectetur ligula, a pulvinar metus purus in massa. Praesent sodales mi sed eros dapibus lacinia a a metus. Nam non tincidunt ligula, sit amet porta orci. Pellentesque et finibus dolor. Suspendisse a ante vitae augue placerat feugiat. Ut vitae nulla sed felis volutpat convallis.
+
+Maecenas id augue sit amet libero mattis vehicula. In hac habitasse platea dictumst. In quis nulla velit. Pellentesque fringilla ante sit amet viverra pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et ornare urna, a blandit dolor. Nam lorem lacus, pretium quis mollis id, blandit a odio. Suspendisse finibus libero tellus, sed pharetra ipsum gravida eu. Quisque nec turpis sit amet leo porta facilisis a commodo massa. Donec sed molestie augue. Sed cursus mauris nec dapibus egestas. Pellentesque ullamcorper venenatis felis vel tincidunt. Cras tempus nunc id ex faucibus venenatis.
+
+Praesent non risus est. Quisque at consequat leo. Nulla dolor tellus, imperdiet sit amet nulla eget, iaculis viverra metus. Phasellus faucibus ut nisl nec viverra. Aenean porta, eros sit amet aliquet viverra, massa eros finibus leo, vel tempus orci diam a metus. Cras sit amet turpis sed velit varius vulputate. Pellentesque viverra mauris nec libero lacinia vulputate. Praesent molestie vehicula imperdiet. Morbi tempus metus nisi. Donec sit amet velit ac tortor convallis varius eget sit amet metus. Sed et volutpat turpis, eget dignissim lectus. Etiam quam massa, pellentesque nec felis in, mattis feugiat magna. Aenean laoreet nunc sed elit pharetra sagittis. Phasellus vitae leo ac libero imperdiet dictum et et elit. Ut leo quam, vehicula in lobortis sit amet, feugiat id orci.//</p>
 				</div>
-			</div>
+			</section>
 		</div>
 		
 		<!--FOOTER-->
 		<footer id='footer'>
-			<p>Author: Leonardo Ribeiro Andrade<br>
-			<a href="mailto:leonardoriband@gmail.com">leonardoriband@gmail.com</a></p>
+			<p>Author: Leonardo Ribeiro Andrade (<a href="mailto:leonardoriband@gmail.com">leonardoriband@gmail.com</a>)</p>
 			<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>,
 			<a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> 
 			and <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>, all from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 		</footer>
+		
+		<script src='JS/index.js'></script>
 	</body>
 	<!--
 	1 Foto de Chevanon Photography no Pexels
 	2 Foto de Jason Villanueva no Pexels
 	3 Foto de Burst no Pexels
 	4 Foto de Dominika Roseclay no Pexels
+	
+	 5-https://www.pexels.com/@ron-lach
+	 6-https://www.pexels.com/@ashford-marx-1565533
+	 7-https://www.pexels.com/@mart-production
+	 8-https://www.pexels.com/@peg1997
+	 9-https://www.pexels.com/@roccafotos
+	 10-https://www.pexels.com/@hiagoitalo
 	-->
 </html>
